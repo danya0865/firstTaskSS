@@ -16,7 +16,6 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        driver.get("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager");
     }
 
     @AfterClass
@@ -24,5 +23,9 @@ public class BaseTest {
         if (driver != null) {
             driver.quit();
         }
+    }
+
+    protected void openUrl(String url) {
+        driver.get(url);
     }
 }

@@ -14,9 +14,10 @@ public class DeleteCustomerTest extends BaseTest {
     @Story("Delete Customer")
     @Description("Verify that a customer can be deleted successfully.")
     public void testDeleteCustomer() {
-        CustomerPage customerPage = new CustomerPage(driver);
+        String startUrl = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager/list";
+        openUrl(startUrl);
 
-        customerPage.openCustomersTab();
+        CustomerPage customerPage = new CustomerPage(driver);
 
         List<String> customerNames = customerPage.getCustomerFirstNames();
         Assert.assertFalse(customerNames.isEmpty(), "No customers found in the table.");

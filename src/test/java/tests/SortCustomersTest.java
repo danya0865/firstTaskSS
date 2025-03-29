@@ -15,9 +15,10 @@ public class SortCustomersTest extends BaseTest {
     @Story("Sort Customers")
     @Description("Verify that customers can be sorted by First Name.")
     public void testSortCustomersByFirstName() {
-        CustomerPage customerPage = new CustomerPage(driver);
+        String startUrl = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager/list";
+        openUrl(startUrl);
 
-        customerPage.openCustomersTab();
+        CustomerPage customerPage = new CustomerPage(driver);
 
         List<String> initialNames = customerPage.getCustomerFirstNames();
 

@@ -14,13 +14,16 @@ public class AddCustomerTest extends BaseTest {
     @Story("Add Customer")
     @Description("Verify that a customer can be added successfully.")
     public void testAddCustomer() {
+        String startUrl = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager/addCust";
+        openUrl(startUrl);
+
         ManagerPage managerPage = new ManagerPage(driver);
 
         String postCode = HelperUtils.generatePostCode();
         String firstName = HelperUtils.generateFirstName(postCode);
         String lastName = "lastName";
 
-        managerPage.clickAddCustomer();
+        //managerPage.clickAddCustomer();
         managerPage.fillCustomerDetails(firstName, lastName, postCode);
         managerPage.submitCustomerForm();
 

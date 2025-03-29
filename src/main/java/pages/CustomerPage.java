@@ -62,7 +62,7 @@ public class CustomerPage extends BasePage {
     }
 
     /**
-     * Удаляет всех клиентов, чьи имена имеют длину, близкую к средней.
+     * Удаляет клиеента, чье имя имеют длину, близкую к средней.
      */
     public void deleteCustomersByAverageNameLength() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
